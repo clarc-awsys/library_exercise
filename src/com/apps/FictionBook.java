@@ -1,7 +1,16 @@
 package com.apps;
 
-public class FictionBook extends Book{
-  public FictionBook(String title, String author, int yearPublish){
+public class FictionBook extends Book {
+  /**
+   * Default constructor.
+   * @param title
+   * @param author
+   * @param yearPublish
+   */
+  public FictionBook(
+      final String title,
+      final String author,
+      final int yearPublish) {
     super(title, author, yearPublish);
   }
 }

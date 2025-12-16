@@ -1,58 +1,52 @@
 package com.apps;
 
 public class Book {
-  private String title;
-  private String author;
+  /** Holds title value of the book.*/
+  private String thisTitle;
+  /** Holds author value of the book.*/
+  private String thisAuthor;
+  /** Holds year published value of the book.*/
   private int yearPublished;
-  private boolean isRented;
-  
-  
-  
-  public String getTitle() {
-    return title;
-  }
-  public void setTitle(String title) {
-    this.title = title;
-  }
-  public String getAuthor() {
-    return author;
-  }
-  public void setAuthor(String author) {
-    this.author = author;
-  }
-  public int getYearPublished() {
-    return yearPublished;
-  }
-  public void setYearPublished(int yearPublished) {
-    this.yearPublished = yearPublished;
-  }
+  /** Holds rent status of the book.*/
+  private boolean thisIsRented;
+  /**
+   * @return if book is rented.
+   */
   public boolean isRented() {
-    return isRented;
+    return thisIsRented;
   }
-  public void setRented(boolean isRented) {
-    this.isRented = isRented;
+  /**
+   * @param isRented
+   */
+  public void setRented(final boolean isRented) {
+    thisIsRented = isRented;
   }
 
 
-
-  public Book (String title, String author, int yearPublish) {
-    this.title = title;
-    this.author = author;
+  /**
+   * This is the default constructor.
+   * @param title
+   * @param author
+   * @param yearPublish
+   */
+  public Book(final String title, final String author, final int yearPublish) {
+    thisTitle = title;
+    thisAuthor = author;
     this.yearPublished = yearPublish;
-    
     setRented(false);
   }
-  
+  /**
+   * Sets the thisIsRented to true.
+   */
   public void rent() {
-    System.out.println(this.title + " is rented.");
+    System.out.println(thisTitle + " is rented.");
     setRented(true);
   }
-  
+  /**
+   * Prints the details of the book.
+   */
   public void display() {
-    System.out.println("Title: " + title + "\nAuthor: " + author + 
-        "\nYear Published: " + yearPublished);
+    System.out.println(thisTitle + " " + thisAuthor + " " + yearPublished);
   }
-  
-  
 
 }
