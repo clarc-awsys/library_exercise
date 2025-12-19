@@ -30,8 +30,6 @@ public final class BookRentalSystem {
         "The Tipping Point", "M. Gladwell", year[2]));
     library.add(new NonFictionBook(
         "Guns, Germs, and Steel", "Jared Diamond ", year[three]));
-    System.out.println("Books Added...");
-    rentBooks();
   }
   /**
    * @param book
@@ -80,5 +78,6 @@ public final class BookRentalSystem {
    */
   public static void main(final String[] args) {
     addBooks();
+    rentBooks();
    }
 }
