@@ -10,7 +10,9 @@ public final class BookRentalSystem {
    * Stores the books you have.
    */
   private static ArrayList<Book> library = new ArrayList<>();
-  
+  /**
+   * @return returns the library ArrayList.
+   */
   public static ArrayList<Book> getLibrary() {
     return library;
   }
